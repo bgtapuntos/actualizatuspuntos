@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "FuenteTitulo";
+  src: url("/css/0fcd45fbfc419c42c8b9.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuenteCuerpo";
+  src: url("/css/6bede58e856278b0f8f1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.container {
+
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.tabs {
+  display: flex;
+margin-top: 5px;
+
+}
+
+.tab {
+  font-size: 16px;
+  font-family: "FuenteTitulo", Arial, sans-serif;
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-bottom: 2px solid #dedede;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  font-weight: 500;
+  color: #666;
+  transition: 0.7s;
+}
+
+.tab.active {
+  font-size: 16px;
+  color: #0050b3;
+  border-bottom: 2px solid #0050b3;
+}
+
+.form {
+  display: none;
+  padding: 16px;
+}
+
+.form.active {
+  
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 26px;
+  padding: 05px;
+}
+
+label {
+  font-family: "FuenteCuerpo", Arial, sans-serif;
+  display: block;
+  font-size: 14px;
+  color: #333;
+
+}
+
+.id-group {
+  display: flex;
+  gap: 8px;
+}
+
+select, input[type="text"], input[type="password"] {
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+  flex: 1;
+}
+
+input, select {
+  border: 1px solid #ccc;
+  transition: border-color 0.07s ease, border-width 0.07s ease, box-shadow 0.07s ease;
+}
+
+input:focus, select:focus {
+  border-width: 2.5px; 
+  border-color: #00479e;  /* ← cambias este color */
+  outline: none;          /* quita el borde azul del navegador */
+  box-shadow: 0 0 3px rgba(#00479e); /* opcional */
+}
+
+select {
+  width: 90px;
+}
+
+.password-group {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye img {
+width: 100%;
+    margin-right: 10px;
+}
+
+
+.btn {
+  width: 100%;
+  background-color: #e0e0e0;
+  color: #888;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: not-allowed;
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.links a {
+  font-size: 13px;
+  color: #0050b3;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

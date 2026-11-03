@@ -1,0 +1,111 @@
+
+
+/* Container that limits width and ensures single-row layout (no vertical scroll) */
+.carousel-wrap{
+    position: relative;
+    width: 100%;
+    max-width: 920px;
+    height: 130px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 23px 1px 20px 1px;
+    overflow: hidden;
+}
+
+/* the strip that moves */
+.carousel{
+display: flex;
+    gap: 10px;
+    transform: translateX(0px);
+    transition: transform .36s 
+cubic-bezier(.22, .9, .3, 1);
+    will-change: transform;
+    padding-bottom: 2px;
+}
+
+/* card visual */
+.card{
+    text-align: center;
+    width: 115px;
+    height: 90px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 12px;
+    border: 1px solid #e6e6e6;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+/* icon circle */
+.icon{
+  width:56px;
+
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:20px;
+  color:inherit;
+  flex-shrink:0;
+
+}
+
+.card-text .title{
+  font-family: "FuenteTitulo", Arial, sans-serif;
+font-size: 14px;
+    color: #0043a9;
+    font-weight: 550;
+    margin-bottom: 4px;
+}
+
+.card-text .subtitle{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:500;
+  opacity:0.9;
+}
+
+/* nav buttons */
+.nav{
+position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    padding: 0;
+    background: white;
+    cursor: pointer;
+    transition: transform .15s 
+ease, box-shadow .15s 
+ease;
+border: 1px solid #0043a9;
+}
+
+.nav:active{ transform:translateY(-50%) scale(.97) }
+
+.nav.next{ right:18px; }
+.nav.prev{
+  left:18px;
+  right:auto;
+}
+
+/* hide prev on first frame by default */
+.nav[disabled]{ display: none; opacity:.34; pointer-events:none; box-shadow:none; }
+
+@media (max-width:120px){
+  .carousel-wrap{ height:140px; padding:10px 54px 10px 12px; max-width:100% }
+  .card{ min-width:170px; height:100px; padding:10px }
+  .icon{ width:48px; height:48px; font-size:18px }
+  .carousel{ gap:12px }
+}
